@@ -28,3 +28,18 @@ Usage: ./sam_len len in.bam out.bam mode
 
 You can add an optional 4<sup>th</sup> parameter that will allow you to determine whether to the use the <em>R</em>eference or <em>Q</em>uery to determine the length.
 
+
+## Alternate installation
+
+If the hts and sam libraries are not installed system wide, you might try this approach to installing sam_len:
+
+```
+module load samtools/1.9
+module load htslib/1.5
+export LIBRARY_PATH=/path/to/samtools/1.9/lib:/path/to/samtools/1.9/htslib-1.9/lib:$LIBRARY_PATH
+cp /path/to/samtools/1.9/lib/libbam.a .
+g++ -o sam_len -Ihtslib -Lhtslib -lhts -L/path/to/bin/sam -lbam sam_len.cpp
+```
+
+
+
