@@ -2,6 +2,8 @@
 
 Some code for working with sam and bam files
 
+[![DOI](https://www.zenodo.org/badge/173795585.svg)](https://www.zenodo.org/badge/latestdoi/173795585)
+
 ## [sam_len](sam_len.cpp)
 
 This is a simple filter that reads a sam/bam file and filters based on the alignment length. You need to make sam_len.cpp with the command:
